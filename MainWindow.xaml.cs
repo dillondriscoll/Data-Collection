@@ -67,7 +67,8 @@ namespace DataCollection
 
             for (int i = 0; i < temp.Length; i++)
             {
-                capturedDataListBox.Items.Add(String.Format("{0} | {1} | {2}", timeTemp[i], unitTemp[i], temp[i].ToString()));
+                if(temp[i] != 0)
+                    capturedDataListBox.Items.Add(String.Format("{0} | {1} | {2}", timeTemp[i], unitTemp[i], temp[i].ToString()));
             }
         }
 
